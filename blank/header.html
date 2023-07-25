@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="total_wrap">
+    <div id="wrap">
+  
+      <div id="wrap_header">
+        
+  <script type="text/javascript"> 
+  var sidebarurl = "http://blankcorp.kr"; // Change as required 
+  var sidebartitle = "블랭크코퍼레이션"; // Change as required 
+  var url = this.location; 
+  var title = document.title;
+  
+  function bookmarksite() { 
+    if (window.sidebar && window.sidebar.addPanel){ // Firefox 
+      window.sidebar.addPanel(sidebartitle, sidebarurl,""); 
+    }else if ( document.all ) { // IE Favorite 
+      // 인터넷익스플로러(IE)
+      window.external.addFavorite(sidebarurl, sidebartitle);
+    }else if (window.opera && window.print) { // do nothing 
+      // 오페라(Opera)
+      var elem = document.createElement('a');
+      elem.setAttribute('href', url);
+      elem.setAttribute('title', title);
+      elem.setAttribute('rel', 'sidebar');
+      elem.click();
+    }else if (navigator.appName=="Netscape") { 
+      alert("확인을 클릭하신 후 주소창에서 <Ctrl-D>를 누르시면 즐겨찾기에 등록됩니다."); 
+    }
+  }
+  </script>
+  
+  <div id="fullmenu" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="header_tgnb">
+          <div class="total" style="">
+            <div class="select_d f-markb" >대한민국<span class="down"><img src='http://blankcorp.kr/include/header/force/img/lang_down.png' class="rollnone"><img src='http://blankcorp.kr/include/header/force/img/lang_down_roll.png' class="rollover"></span>
+            </div>
+            <ul class="select_op" >
+              <li><a href="http://blankcorp.tw/index.php" class="f-ch">TAIWAN</a></li>
+              <li><a href="http://blankcorp.hk/index.php" class="f-ch">HONGKONG</a></li>
+              <li><a href="http://blankcorp.sg/index.php" class="f-ch">SINGAPORE</a></li>
+              <li><a href="http://blankcorp.kr/index.php" class="a_focus f-marko">대한민국</a></li>
+            </ul>
+          </div><!--total end  -->
+          </div>
+    
+</body>
+</html>
+
