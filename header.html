@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="header_t f-nav" style="padding-top: 5px;">
+		<div class="tmp_header" style="margin: 0px auto; max-width: 100%;">
+			<h1 class="header_logo"><a href="http://blankcorp.kr/index.php">
+			<img src="http://blankcorp.kr/include/header/force/img/top_logo.png" alt="블랭크코퍼레이션" class="img_max rollnone"><img src="http://blankcorp.kr/include/header/force/img/logo_hover.jpg" alt="블랭크코퍼레이션" class="img_max rollover"><img src="http://blankcorp.kr/include/header/force/img/logo_over.gif" alt="블랭크코퍼레이션" class="img_max hover">
+			</a></h1>
+			<div class="header_tgnb">
+				<div class="total" style="">
+					<div class="select_d f-marko">대한민국<span class="down"><img src="/include/header/force/img/lang_down_roll.png"></span>
+					</div>
+					<ul class="select_op" style="display: none;">
+						<li><a href="http://blankcorp.tw/index.php" class="f-ch">TAIWAN</a></li>
+						<li><a href="http://blankcorp.hk/index.php" class="f-ch">HONGKONG</a></li>
+            <li><a href="http://blankcorp.sg/index.php" class="f-ch">SINGAPORE</a></li>
+						<li><a href="http://blankcorp.kr/index.php" class="a_focus f-marko">대한민국</a></li>
+					</ul>
+				</div><!--total end  -->
+			</div>
+			<div class="header_gnb"><style>
+/* global navigation bar */
+.gnb								{position:absolute; right:0; z-index:999;}
+/* gnb Common */
+.menu								{position:relative; border:0px solid red;}
+.menu:after					{content:"";display:block;clear:both; width:100%;}
+.menu .major ul						{float:left;list-style:none;margin:0;padding:0}
+.menu .major ul:after			{content:"";display:block;clear:both; width:100%;}
+.menu .major ul li						{position:relative; z-index:1; float:left}
+.menu .major ul li a					{position:relative; padding:0; text-decoration:none !important}
+.menu .major ul li a span		{display:inline-block; margin:0 28px 0 0; padding:0 0 10px 0px; color:#fff; font-size:18px;}
+.f-nav .menu .major ul li a span		{display:inline-block; margin:0 28px 0 0; padding:0 0 10px 0px; color:#000; font-size:18px;}
+
+/* gnb Hover 
+.menu .major li.active{z-index:2}
+.menu .major li a:hover span,.menu .major li a:active span,.menu .major li a:focus span{color:#ea002b}
+.menu .major li.active a span{color:#ea002b}
+.menu .major li.pactive a span{color:#ea002b}
+.menu .major li.pactive ul.sub{display:none;}
+*/
+/*대메뉴 포커스 효과 변경시 */
+
+/* gnb 2depth */
+.menu .major ul.sub							{position:absolute; top:38px; display:none; border:1px solid #dfdfdf; background:#fff; margin:0;padding:0;}
+.menu .major li.active ul.sub		{display:block;}
+.menu .major ul.sub li					{clear:both; margin:0; padding:7px 9px}
+.menu .major ul.sub li a				{color:#555; font-size:12px;}
+.menu .major ul.sub li a:hover	{color:#ea002b}
+
+/* gnb 2depth  */
+li.m1 ul.sub{left:0px; width:160px;}
+li.m2 ul.sub{left:0px; width:160px;}
+li.m3 ul.sub{left:0px; width:160px;}
+li.m4 ul.sub{left:0px; width:160px;}
+li.m5 ul.sub{left:0px; width:160px;}
+li.m6 ul.sub{left:0px; width:160px;}
+</style>
+<script>
+	/* 메뉴 시작*/
+$(function(){
+	var menu = $('div.menu');
+	var major = $('div.major');
+	var li_list = major.find('>ul>li');
+
+	// 서브메뉴 보이기
+	function show_menu(){
+		t = $(this);
+		li_list.removeClass('active');
+		li_list.removeClass('pactive');
+		t.parent('li').addClass('active');
+	}
+	// 서브메뉴 숨기기
+	function hide_menu(){
+		li_list.removeClass('active');
+			}
+
+	li_list.find('>a').mouseover(show_menu).focus(show_menu);
+	menu.mouseleave(hide_menu);
+	li_list.find('ul.sub').mouseleave(hide_menu);
+	$('*:not(".menu *")').focus(hide_menu);
+
+	hide_menu();
+	/* 메뉴 끝*/
+});
+
+</script>
+<!-- 1뎁스:시스템폰트, 2뎁스 : 시스템폰트 -->
+<div class="gnb">
+	<div id="menu" class="menu">
+		<div class="major">
+			<ul>
+							<li class="m1"><a href="http://blankcorp.kr/sp.php?p=11"><span class="f-marko">about</span></a>
+									</li>
+							<li class="m2"><a href="http://blankcorp.kr/sp.php?p=21"><span class="f-marko">team</span></a>
+									</li>
+							<li class="m3"><a href="http://blankcorp.kr/bbs/board.php?bo_table=31"><span class="f-marko">brand</span></a>
+									</li>
+							<li class="m4"><a href="http://blankcorp.kr/bbs/board.php?bo_table=41"><span class="f-marko">news</span></a>
+									</li>
+							<li class="m5"><a href="http://blankcorp.kr/sp.php?p=51"><span class="f-marko">career</span></a>
+									</li>
+						</ul>
+		</div>
+	</div>
+</div></div>
+
+			<div id="btn-fullmenu" class="header_menu_btn">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</div>
+		</div>
+	</div>
+    
+</body>
+</html>
+
